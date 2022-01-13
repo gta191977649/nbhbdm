@@ -5,11 +5,12 @@
 button, html, input {
     font: 200 1em 微软雅黑,sans-serif;
 }
-@media (prefers-color-scheme: dark) {
-    body {
-        background: #222;
-        color: #eee;
-    }
+body {
+    background: eee;
+    color: #3c4043;
+}
+.mdui-panel-item { 
+    border-radius: 24px;
 }
 .nbhbdm-title {
     background: url(../img/nbhbdm.svg) no-repeat;
@@ -34,21 +35,54 @@ button, html, input {
     font-size: 1.5em;
     line-height: 1.5em;
 }
+center {
+    display: block;
+    text-align: -webkit-center;
+}
 .wb-search {
-    text-align: center;
-    margin-top: 60px;
-    font-size: 0;
+    display: flex;
+    z-index: 3;
+    height: 44px;
+    background: transparent;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    margin: 0 auto;
+    width: 638px;
+    width: auto;
+    max-width: 584px;
+}
+.wb-searcj .wrapper {
+    flex: 1;
+    display: flex;
+    padding: 5px 8px 0 15px;
 }
 .wb-search input {
-    border: 1px solid #b6b6b6;
-    width: 300px;
-    height: 32px;
-    vertical-align: middle;
-    font: 16px/18px arial;
-    padding-left: 7px;
-    outline-style: none ;
-    border: 1px solid #ccc; 
-    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: #e8eaed;
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    -webkit-tap-highlight-color: transparent;
+    margin-top: 5px;
+    margin-left: 40px;
+    height: 34px;
+    width: 520px;
+    font-size: 16px;
+}
+.wb-search-button-wrapper {
+    padding-top: 18px;
+    height:70px;
+}
+.iblpc {
+    width: 20px;
+    position: absolute;
+    margin-left:15px;
+    margin-top:12px;
 }
 .wb-search input:focus{
     border-color: #66afe9;
@@ -57,15 +91,20 @@ button, html, input {
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
 }
 .wb-search button {
-    width: 100px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
     height: 36px;
-    line-height: 36px;
-    color: #fff;
-    font-size: 15px;
-    letter-spacing: 1px;
-    background: #3385ff;
-    border: 1px solid #2d78f4;
-    vertical-align: middle;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
 }
 .wb-search button:hover {
     background: #317ef3;
@@ -120,11 +159,17 @@ button, html, input {
     transition: opacity .5s ease;
 }
 .wb-footer {
-    padding: 7em 0 4em;
+    background: #f2f2f2;
+    height: 36px;
     font-size: 15px;
     text-align: center;
+    padding: 5px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
 }
 .wb-footer span, .wb-footer a {
+    line-height:36px;
     display: inline-block;
     margin: 0 1em;
     color: #999;
